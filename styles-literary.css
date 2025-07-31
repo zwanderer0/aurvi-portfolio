@@ -1,0 +1,876 @@
+/* Literary Website Design - Inspired by Hello Heco's elegant aesthetic */
+
+:root {
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --text-light: #999999;
+    --accent-gold: #c9a96e;
+    --accent-blue: #4a90a4;
+    --background: #ffffff;
+    --background-warm: #fefcf8;
+    --border-light: #f0f0f0;
+    --shadow-subtle: 0 2px 20px rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 8px 40px rgba(0, 0, 0, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.7;
+    color: var(--text-primary);
+    background: var(--background);
+    overflow-x: hidden;
+}
+
+/* Typography */
+.serif {
+    font-family: 'Crimson Text', 'Georgia', serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Crimson Text', 'Georgia', serif;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+/* Navigation */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.nav.scrolled {
+    border-bottom-color: var(--border-light);
+    box-shadow: var(--shadow-subtle);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-family: 'Crimson Text', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hello Heco style underline effect */
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 4"><path d="M0,2 Q25,0 50,2 T100,2" stroke="%23c9a96e" stroke-width="1" fill="none"/></svg>');
+    background-size: 50px 4px;
+    background-repeat: repeat-x;
+    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: wavyUnderlineMove 3s linear infinite;
+    animation-play-state: paused;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+.nav-links a:hover::before {
+    width: 100%;
+    animation-play-state: running;
+}
+
+@keyframes wavyUnderlineMove {
+    0% { background-position: 0px 0; }
+    100% { background-position: 50px 0; }
+}
+
+/* Hero Section */
+.hero-about {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+    background: var(--background);
+}
+
+/* Hello Heco inspired background animations */
+.hero-about::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    right: -10%;
+    bottom: -10%;
+    background: linear-gradient(135deg, 
+        rgba(201, 169, 110, 0.03) 0%, 
+        rgba(74, 144, 164, 0.02) 25%,
+        rgba(201, 169, 110, 0.04) 50%,
+        rgba(74, 144, 164, 0.03) 75%,
+        rgba(201, 169, 110, 0.02) 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease-in-out infinite;
+    transform: scale(1.03);
+    backface-visibility: hidden;
+    will-change: transform;
+}
+
+.hero-about::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="wavy" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M0,50 Q25,30 50,50 T100,50" stroke="%23c9a96e" stroke-width="0.5" fill="none" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23wavy)"/></svg>');
+    background-size: 200px 200px;
+    opacity: 0;
+    animation: wavyMove 20s linear infinite;
+    transition: opacity 0.3s ease;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes wavyMove {
+    0% { background-position: 0px 100%; }
+    100% { background-position: -200px 100%; }
+}
+
+.hero-about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-about-content {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 80px;
+    align-items: center;
+}
+
+.hero-text {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: heroFadeIn 1.2s ease 0.3s forwards;
+}
+
+.hero-intro {
+    font-size: clamp(42px, 5vw, 72px);
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 30px;
+    color: var(--text-primary);
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* Floating Awards */
+.floating-awards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: heroFadeIn 1s ease 0.8s forwards;
+}
+
+.award-floating {
+    padding: 8px 16px;
+    background: rgba(201, 169, 110, 0.1);
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.award-floating:hover {
+    background: var(--accent-gold);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Hero Image */
+.hero-image {
+    position: relative;
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+    animation: heroImageIn 1.2s ease 0.6s forwards;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: var(--shadow-medium);
+    transition: transform 0.6s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.02);
+}
+
+/* Scroll transition for hero image */
+.hero-image.scroll-fade {
+    opacity: 0;
+    transform: scale(0.95) translateY(40px);
+    transition: all 0.8s ease;
+}
+
+/* About Section */
+.about-section {
+    padding: 120px 0;
+    background: var(--background);
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.about-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.about-text p {
+    margin-bottom: 24px;
+}
+
+.about-text p:first-child {
+    font-size: 22px;
+    color: var(--text-primary);
+    font-weight: 300;
+}
+
+/* Writing Section */
+.writing-section {
+    padding: 120px 0;
+    background: var(--background-warm);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 80px;
+    color: var(--text-primary);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: var(--accent-gold);
+}
+
+.writing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.writing-list {
+    display: grid;
+    gap: 60px;
+}
+
+.writing-entry {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.writing-entry.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.writing-link-wrapper {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 40px;
+    background: var(--background);
+    border-radius: 12px;
+    box-shadow: var(--shadow-subtle);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid var(--border-light);
+    position: relative;
+    overflow: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+}
+
+/* Hello Heco wavy background effect on hover */
+.writing-link-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="writing-wavy" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M0,40 Q20,20 40,40 T80,40" stroke="%23c9a96e" stroke-width="0.3" fill="none" opacity="0.4"/></pattern></defs><rect width="100%" height="100%" fill="url(%23writing-wavy)"/></svg>');
+    background-size: 160px 160px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: writingWavyMove 25s linear infinite;
+    z-index: -1;
+}
+
+.writing-link-wrapper:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: var(--shadow-medium);
+    border-color: rgba(201, 169, 110, 0.3);
+}
+
+.writing-link-wrapper:hover::before {
+    opacity: 1;
+}
+
+@keyframes writingWavyMove {
+    0% { background-position: 0px 100%; }
+    100% { background-position: -160px 100%; }
+}
+
+/* Use CSS custom property for dynamic wavy position */
+.writing-link-wrapper:hover::before,
+.contact-link:hover::before,
+.hero-about:hover::after {
+    background-position-x: var(--wavy-position, 0px);
+}
+
+.writing-title-large {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.writing-link-wrapper:hover .writing-title-large {
+    color: var(--accent-gold);
+}
+
+.writing-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.writing-publication {
+    color: var(--accent-blue);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.writing-year {
+    color: var(--text-light);
+}
+
+.writing-award {
+    color: var(--accent-gold);
+    font-style: italic;
+}
+
+.writing-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+/* Awards Section */
+.awards-section {
+    padding: 120px 0;
+    background: var(--background);
+}
+
+.awards-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.awards-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 80px;
+    font-size: 18px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.awards-timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+.awards-timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--border-light);
+}
+
+.award-item {
+    position: relative;
+    margin-bottom: 60px;
+    padding-left: 60px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.6s ease;
+}
+
+.award-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.award-item::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-gold);
+    border-radius: 50%;
+    border: 3px solid var(--background);
+    box-shadow: 0 0 0 1px var(--border-light);
+}
+
+.award-year {
+    font-size: 14px;
+    color: var(--accent-gold);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.award-title {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.award-description {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Interviews Section */
+.interviews-section {
+    padding: 120px 0;
+    background: var(--background-warm);
+}
+
+.interviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.interview-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.interview-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.interview-link {
+    display: block;
+    padding: 30px;
+    background: var(--background);
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow-subtle);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-light);
+    height: 100%;
+}
+
+.interview-link:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+.interview-title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.interview-publication {
+    font-size: 14px;
+    color: var(--accent-blue);
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.interview-description {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 120px 0;
+    background: var(--text-primary);
+    color: white;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.contact-title {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.contact-subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
+    transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes heroFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroImageIn {
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Scroll Animations */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-about-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+    }
+    
+    .hero-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 20px;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
+    
+    .hero-about-container,
+    .about-container,
+    .writing-container,
+    .awards-container,
+    .interviews-grid,
+    .contact-container {
+        padding: 0 20px;
+    }
+    
+    .hero-intro {
+        font-size: 36px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .writing-title-large {
+        font-size: 24px;
+    }
+    
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Hello Heco style cursor */
+body {
+    cursor: none;
+}
+
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: rgba(201, 169, 110, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.1s ease;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+}
+
+.cursor.hover {
+    width: 40px;
+    height: 40px;
+    background: rgba(201, 169, 110, 0.3);
+    border: 2px solid var(--accent-gold);
+}
+
+.cursor.click {
+    width: 15px;
+    height: 15px;
+}
+
+/* Activate wavy background on hover for hero */
+.hero-about:hover::after {
+    opacity: 0.6;
+}
+
+/* Contact links with Hello Heco effects */
+.contact-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="contact-wavy" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M0,25 Q12.5,10 25,25 T50,25" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" fill="none"/></pattern></defs><rect width="100%" height="100%" fill="url(%23contact-wavy)"/></svg>');
+    background-size: 100px 100px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: contactWavyMove 15s linear infinite;
+    z-index: -1;
+}
+
+.contact-link:hover::before {
+    opacity: 1;
+}
+
+@keyframes contactWavyMove {
+    0% { background-position: 0px 100%; }
+    100% { background-position: -100px 100%; }
+}
+
+/* Section background animations */
+.writing-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.writing-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+        rgba(201, 169, 110, 0.01) 0%, 
+        rgba(74, 144, 164, 0.01) 50%,
+        rgba(201, 169, 110, 0.01) 100%);
+    background-size: 200% 200%;
+    animation: sectionGradientMove 20s ease-in-out infinite;
+    z-index: 0;
+}
+
+.writing-container {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes sectionGradientMove {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Awards section with morphing background */
+.awards-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.awards-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 70%, rgba(201, 169, 110, 0.02) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(74, 144, 164, 0.02) 0%, transparent 50%);
+    animation: morphingBackground 25s ease-in-out infinite;
+    z-index: 0;
+}
+
+.awards-container {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes morphingBackground {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        opacity: 0.5;
+    }
+    25% { 
+        transform: scale(1.1) rotate(90deg);
+        opacity: 0.8;
+    }
+    50% { 
+        transform: scale(0.9) rotate(180deg);
+        opacity: 0.3;
+    }
+    75% { 
+        transform: scale(1.2) rotate(270deg);
+        opacity: 0.7;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-primary: #ffffff;
+        --text-secondary: #cccccc;
+        --text-light: #999999;
+        --background: #0a0a0a;
+        --background-warm: #1a1a1a;
+        --border-light: #333333;
+    }
+}

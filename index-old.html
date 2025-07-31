@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurvi Sharma - Writer & Storyteller</title>
+    <meta name="description" content="Aurvi Sharma: Award-winning writer exploring memory, water, and the stories that shape us. Winner of the 2017 New York Foundation for the Arts Fellowship.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=NYTimes:wght@400;500;700&family=Cheltenham:wght@400;700&family=Franklin:wght@400;500;600&family=Georgia:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Fallback fonts for NYT style -->
+    <style>
+        @font-face {
+            font-family: 'NYTimes';
+            src: local('Georgia'), local('Times New Roman'), serif;
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cheltenham';
+            src: local('Georgia'), local('Times'), serif;
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Franklin';
+            src: local('Helvetica Neue'), local('Arial'), sans-serif;
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles-modern.css">
+</head>
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <!-- Dot Navigation -->
+    <div class="dot-navigation">
+        <div class="dot-nav-item active" data-section="home"></div>
+        <div class="dot-nav-item" data-section="about"></div>
+        <div class="dot-nav-item" data-section="writing"></div>
+        <div class="dot-nav-item" data-section="awards"></div>
+        <div class="dot-nav-item" data-section="interviews"></div>
+        <div class="dot-nav-item" data-section="contact"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#home" class="logo">AURVI SHARMA</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#writing">Writing</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#interviews">Interviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-about">
+        <div class="hero-about-container">
+            <div class="hero-about-content">
+                <div class="hero-text">
+                    <h1 class="hero-intro">
+                        Award-winning writer exploring memory, water, and the stories that shape us.
+                    </h1>
+                    <div class="hero-awards">
+                        <div class="award-badge">
+                            <span class="award-year">2017</span>
+                            <span class="award-text">New York Foundation for the Arts Fellowship</span>
+                        </div>
+                        <div class="award-badge">
+                            <span class="award-year">2020</span>
+                            <span class="award-text">Best American Experimental Writing</span>
+                        </div>
+                        <div class="award-badge">
+                            <span class="award-year">2015</span>
+                            <span class="award-text">Gulf Coast Prize in Nonfiction</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image-spacer"></div>
+            </div>
+        </div>
+        <div class="hero-image" id="heroImageWrapper">
+            <img src="aurvi.jpeg" alt="Aurvi Sharma" id="heroImage">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p style="margin-bottom: 1.5rem; font-size: 1.25rem; line-height: 1.5; font-weight: 400; font-family: 'NYTimes', Georgia, serif; color: var(--nyt-black);">
+                        Aurvi Sharma grew up in the Indian hinterland, moving from river to river with her family. Winner of the 2017 New York Foundation for the Arts Fellowship, Aurvi's work has been anthologised in the Best American Experimental Writing 2020 and her essays are notables in the Best American Essays 2017 ("Apricots") and 2016 ("Eleven Stories of Water and Stone").
+                    </p>
+                    <p style="margin-bottom: 1.5rem; font-family: 'NYTimes', Georgia, serif; font-size: 1.125rem; line-height: 1.625; color: var(--nyt-black);">
+                        Aurvi has been awarded the Gulf Coast Nonfiction Prize, the Prairie Schooner Essay Prize, the AWP Kurt Brown Prize, the Wasafiri New Writing Prize, a Glenna Luschei Prairie Schooner Award, and three Pushcart nominations.
+                    </p>
+                    <p style="margin-bottom: 1.5rem; font-family: 'NYTimes', Georgia, serif; font-size: 1.125rem; line-height: 1.625; color: var(--nyt-black);">
+                        A Bread Loaf-Rona Jaffe Foundation Scholar in Nonfiction, Aurvi has received fellowships from Yaddo, MacDowell, Virginia Center for the Creative Arts, Santa Fe Art Institute, and Tin House.
+                    </p>
+                    <p style="margin-bottom: 1.5rem; font-family: 'NYTimes', Georgia, serif; font-size: 1.125rem; line-height: 1.625; color: var(--nyt-black);">
+                        As the recipient of the Sarai-CSDS Nonfiction Fellowship, Aurvi revisited her childhood homes to walk the ruins of time located on the banks of dying rivers in North India. She is working on a memoir about her forgotten foremothers, the Yamuna River, and the disobedient women who thrived by the river for millennia.
+                    </p>
+                    <p style="margin-bottom: 1.5rem; font-family: 'NYTimes', Georgia, serif; font-size: 1.125rem; line-height: 1.625; color: var(--nyt-black);">
+                        Aurvi's writing appears in Bon Appetit, Guernica, Kenyon Review Online, Pleiades, Fourth Genre, Essay Daily, and Everyday Genius.
+                    </p>
+                    <p style="margin-bottom: 1.5rem; font-family: 'NYTimes', Georgia, serif; font-size: 1.125rem; line-height: 1.625; color: var(--nyt-black);">
+                        A branding consultant at Studio 577, she lives in New York City.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Writing Section -->
+    <section id="writing" class="section">
+        <div class="container">
+            <h2 class="section-title serif">Selected Writing</h2>
+            <div class="writing-list">
+                <article class="writing-entry">
+                    <a href="https://www.bonappetit.com/story/rejected-cooking-for-feminism" target="_blank" class="writing-link-wrapper">
+                        <h3 class="writing-title-large">
+                            I Rejected Cooking in the Name of Feminism—Until I had to Feed Myself
+                        </h3>
+                        <div class="writing-meta">
+                            <span class="writing-publication">Bon Appetit</span>
+                            <span class="writing-year">2019</span>
+                        </div>
+                        <p class="writing-description">
+                            A personal exploration of feminism, tradition, and the complex relationship between food and identity.
+                        </p>
+                    </a>
+                </article>
+
+                <article class="writing-entry">
+                    <a href="http://gulfcoastmag.org/journal/28.1/apricots/" target="_blank" class="writing-link-wrapper">
+                        <h3 class="writing-title-large">
+                            Apricots
+                        </h3>
+                        <div class="writing-meta">
+                            <span class="writing-publication">Gulf Coast</span>
+                            <span class="writing-year">Fall 2015</span>
+                            <span class="writing-award">Winner, Gulf Coast Nonfiction Prize</span>
+                        </div>
+                        <p class="writing-description">
+                            "Beautifully written; hard-hitting and succeeds as the 'personal is the political'; lyrical; a long, extended metaphor" —Xu Xi
+                        </p>
+                    </a>
+                </article>
+
+                <article class="writing-entry">
+                    <a href="https://www.guernicamag.com/tell-shattered-story/" target="_blank" class="writing-link-wrapper">
+                        <h3 class="writing-title-large">
+                            How to Tell a Shattered Story
+                        </h3>
+                        <div class="writing-meta">
+                            <span class="writing-publication">Guernica</span>
+                            <span class="writing-year">2017</span>
+                        </div>
+                        <p class="writing-description">
+                            An introspective piece on narrative fragmentation and the challenge of reconstructing memory.
+                        </p>
+                    </a>
+                </article>
+
+                <article class="writing-entry">
+                    <a href="https://prairieschooner.unl.edu/excerpt/eleven-stories-water-and-stone" target="_blank" class="writing-link-wrapper">
+                        <h3 class="writing-title-large">
+                            Eleven Stories of Water and Stone
+                        </h3>
+                        <div class="writing-meta">
+                            <span class="writing-publication">Prairie Schooner</span>
+                            <span class="writing-year">Spring 2015</span>
+                            <span class="writing-award">Winner, Prairie Schooner Essay Prize</span>
+                        </div>
+                        <p class="writing-description">
+                            "This essay is best described in the author's own phrase: 'trying to hold water in a fist.'" —Judith Ortiz Cofer
+                        </p>
+                    </a>
+                </article>
+
+                <article class="writing-entry">
+                    <a href="http://www.kenyonreview.org/kr-online-issue/2017-mayjune/selections/aurvi-sharma-656342/" target="_blank" class="writing-link-wrapper">
+                        <h3 class="writing-title-large">
+                            Revenge Porn
+                        </h3>
+                        <div class="writing-meta">
+                            <span class="writing-publication">Kenyon Review Online</span>
+                            <span class="writing-year">2017</span>
+                        </div>
+                        <p class="writing-description">
+                            A powerful examination of technology, privacy, and the violation of trust in the digital age.
+                        </p>
+                    </a>
+                </article>
+
+                <article class="writing-entry">
+                    <div class="writing-link-wrapper no-link">
+                        <h3 class="writing-title-large">
+                            Hymns for the Drowning
+                        </h3>
+                        <div class="writing-meta">
+                            <span class="writing-publication">Pleiades</span>
+                            <span class="writing-year">2016</span>
+                        </div>
+                        <p class="writing-description">
+                            An evocative piece exploring themes of loss and redemption.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="writing-entry">
+                    <a href="http://www.essaydaily.org/2016/03/intl-essayists-aurvi-sharma-on-body.html" target="_blank" class="writing-link-wrapper">
+                        <h3 class="writing-title-large">
+                            The Body Patchwork
+                        </h3>
+                        <div class="writing-meta">
+                            <span class="writing-publication">Essay Daily</span>
+                            <span class="writing-year">March 2016</span>
+                        </div>
+                        <p class="writing-description">
+                            An intimate exploration of body, identity, and the stories we tell about ourselves.
+                        </p>
+                    </a>
+                </article>
+
+                <article class="writing-entry">
+                    <a href="http://www.essaydaily.org/2015/09/weave-forward-weave-backward.html" target="_blank" class="writing-link-wrapper">
+                        <h3 class="writing-title-large">
+                            Weave Forward, Weave Backward
+                        </h3>
+                        <div class="writing-meta">
+                            <span class="writing-publication">Essay Daily</span>
+                            <span class="writing-year">September 2015</span>
+                        </div>
+                        <p class="writing-description">
+                            A meditation on craft, memory, and the creative process.
+                        </p>
+                    </a>
+                </article>
+
+                <article class="writing-entry">
+                    <a href="http://www.asymptotejournal.com/blog/2017/06/28/trishanku-language-as-purgatory/" target="_blank" class="writing-link-wrapper">
+                        <h3 class="writing-title-large">
+                            Trishanku—Language as Purgatory
+                        </h3>
+                        <div class="writing-meta">
+                            <span class="writing-publication">Asymptote</span>
+                            <span class="writing-year">2017</span>
+                        </div>
+                        <p class="writing-description">
+                            An exploration of language, displacement, and cultural identity.
+                        </p>
+                    </a>
+                </article>
+
+                <article class="writing-entry">
+                    <a href="http://www.tandfonline.com/doi/pdf/10.1080/02690055.2015.981042" target="_blank" class="writing-link-wrapper">
+                        <h3 class="writing-title-large">
+                            Seeing Double
+                        </h3>
+                        <div class="writing-meta">
+                            <span class="writing-publication">Wasafiri</span>
+                            <span class="writing-year">Spring 2015</span>
+                            <span class="writing-award">Winner, Wasafiri New Writing Prize</span>
+                        </div>
+                        <p class="writing-description">
+                            A prize-winning exploration of perception and reality.
+                        </p>
+                    </a>
+                </article>
+
+                <article class="writing-entry">
+                    <a href="aurvi.weebly.com/uploads/4/7/7/5/47752917/poetry-ky-fourth-genre.pdf" target="_blank" class="writing-link-wrapper">
+                        <h3 class="writing-title-large">
+                            Poetry, KY
+                        </h3>
+                        <div class="writing-meta">
+                            <span class="writing-publication">Fourth Genre</span>
+                            <span class="writing-year">February 2015</span>
+                        </div>
+                        <p class="writing-description">
+                            A reflection on place, memory, and the landscapes that shape us.
+                        </p>
+                    </a>
+                </article>
+
+                <article class="writing-entry">
+                    <a href="http://www.everyday-genius.com/2013/12/aurvi-sharma.html" target="_blank" class="writing-link-wrapper">
+                        <h3 class="writing-title-large">
+                            The Slice
+                        </h3>
+                        <div class="writing-meta">
+                            <span class="writing-publication">Everyday Genius</span>
+                            <span class="writing-year">December 2013</span>
+                        </div>
+                        <p class="writing-description">
+                            An early work showcasing Aurvi's distinctive voice and style.
+                        </p>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="section awards">
+        <div class="container">
+            <h2 class="section-title">Awards & Fellowships</h2>
+            <div class="awards-grid">
+                <div class="award-item">
+                    <div class="award-logo">
+                        <img src="logos/yaddo-logo.png" alt="Yaddo Logo">
+                    </div>
+                    <div class="award-content">
+                        <div class="award-year">2020</div>
+                        <div class="award-title"><a href="https://www.yaddo.org/" target="_blank" class="writing-link">Yaddo Fellowship</a></div>
+                        <div class="award-description">Prestigious artist residency fellowship</div>
+                    </div>
+                </div>
+                
+                <div class="award-item">
+                    <div class="award-logo">
+                        <img src="logos/vcca-logo.jpg" alt="VCCA Logo">
+                    </div>
+                    <div class="award-content">
+                        <div class="award-year">2018</div>
+                        <div class="award-title"><a href="https://vcca.com/main/special-programs/sponsored-fellowships/goldfarb-family-fund" target="_blank" class="writing-link">Goldfarb Family Fellowship</a></div>
+                        <div class="award-description">Virginia Center for the Creative Arts</div>
+                    </div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-logo">
+                        <img src="logos/nyfa-logo.jpg" alt="NYFA Logo">
+                    </div>
+                    <div class="award-content">
+                        <div class="award-year">2017</div>
+                        <div class="award-title">New York Foundation for the Arts Artist Fellowship</div>
+                        <div class="award-description">Nonfiction Literature</div>
+                    </div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-logo">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.7rem; text-align: center;">BAE<br>2017</div>
+                    </div>
+                    <div class="award-content">
+                        <div class="award-year">2017</div>
+                        <div class="award-title"><a href="https://www.amazon.com/Best-American-Essays-2017/dp/0544817338" target="_blank" class="writing-link">Notable Essay</a></div>
+                        <div class="award-description">The Best American Essays 2017</div>
+                    </div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-logo">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.6rem; text-align: center;">Bread<br>Loaf</div>
+                    </div>
+                    <div class="award-content">
+                        <div class="award-year">2017</div>
+                        <div class="award-title"><a href="http://www.middlebury.edu/bread-loaf-conferences/bl_writers/applicationandacceptance" target="_blank" class="writing-link">Bread Loaf-Rona Jaffe Foundation Scholar</a></div>
+                        <div class="award-description">In Nonfiction</div>
+                    </div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-logo">
+                        <img src="logos/macdowell-logo.jpg" alt="MacDowell Logo">
+                    </div>
+                    <div class="award-content">
+                        <div class="award-year">2016</div>
+                        <div class="award-title"><a href="https://www.macdowell.org/" target="_blank" class="writing-link">MacDowell Fellowship</a></div>
+                        <div class="award-description">Artist residency fellowship</div>
+                    </div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-logo">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.7rem; text-align: center;">BAE<br>2016</div>
+                    </div>
+                    <div class="award-content">
+                        <div class="award-year">2016</div>
+                        <div class="award-title"><a href="https://www.amazon.com/Best-American-Essays-2016/dp/0544812107" target="_blank" class="writing-link">Notable Essay</a></div>
+                        <div class="award-description">The Best American Essays 2016</div>
+                    </div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-logo">
+                        <img src="logos/gulf-coast-logo.jpg" alt="Gulf Coast Logo">
+                    </div>
+                    <div class="award-content">
+                        <div class="award-year">2015</div>
+                        <div class="award-title"><a href="http://gulfcoastmag.org/contests/barthelme-prize/" target="_blank" class="writing-link">Gulf Coast Prize</a></div>
+                        <div class="award-description">In Nonfiction</div>
+                    </div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-logo">
+                        <img src="logos/awp-logo.jpg" alt="AWP Logo">
+                    </div>
+                    <div class="award-content">
+                        <div class="award-year">2015</div>
+                        <div class="award-title"><a href="https://www.awpwriter.org/contests/wcc_scholarships_previous_winners" target="_blank" class="writing-link">AWP Emerging Writer Prize</a></div>
+                        <div class="award-description">Nonfiction</div>
+                    </div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-logo">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.6rem; text-align: center;">Prairie<br>Schooner</div>
+                    </div>
+                    <div class="award-content">
+                        <div class="award-year">2014</div>
+                        <div class="award-title"><a href="http://prairieschooner.unl.edu/news/2014-summer-nonfiction-contest-winner-announced" target="_blank" class="writing-link">Prairie Schooner Essay Prize</a></div>
+                        <div class="award-description">Essay contest winner</div>
+                    </div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-logo">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.6rem; text-align: center;">Wasafiri</div>
+                    </div>
+                    <div class="award-content">
+                        <div class="award-year">2014</div>
+                        <div class="award-title"><a href="http://www.wasafiri.org/pages/content/index.asp?PageID=382" target="_blank" class="writing-link">Wasafiri New Writing Prize</a></div>
+                        <div class="award-description">Life Writing</div>
+                    </div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-logo">
+                        <img src="logos/sarai-logo.jpg" alt="Sarai Logo">
+                    </div>
+                    <div class="award-content">
+                        <div class="award-year">2012-13</div>
+                        <div class="award-title"><a href="http://sarai.net/city-as-studio/" target="_blank" class="writing-link">Sarai 'City as Studio' Nonfiction Fellowship</a></div>
+                        <div class="award-description">New Delhi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interviews Section -->
+    <section id="interviews" class="section">
+        <div class="container">
+            <h2 class="section-title serif">Interviews & Features</h2>
+            <div class="interviews-grid">
+                <article class="interview-item">
+                    <a href="https://youtu.be/LjnmbhxOtXM?t=847" target="_blank" class="interview-link">
+                        <h3 class="interview-title">
+                            VCCA Fireplace Chat
+                        </h3>
+                        <p class="interview-publication">Virginia Center for the Creative Arts</p>
+                        <p class="interview-description">
+                            Readings and conversation between Jennifer Lunden, Iraj Isaac Rahmin & Aurvi Sharma
+                        </p>
+                    </a>
+                </article>
+
+                <article class="interview-item">
+                    <a href="http://therumpus.net/2017/12/visible-women-writers-of-color-aurvi-sharma/" target="_blank" class="interview-link">
+                        <h3 class="interview-title">
+                            VISIBLE: Women Writers of Color
+                        </h3>
+                        <p class="interview-publication">The Rumpus</p>
+                        <p class="interview-description">
+                            Feature interview exploring identity, craft, and literary heritage
+                        </p>
+                    </a>
+                </article>
+
+                <article class="interview-item">
+                    <a href="https://www.wasafiri.org/article/five-minute-interview-aurvi-sharma/" target="_blank" class="interview-link">
+                        <h3 class="interview-title">
+                            Five Minute Interview
+                        </h3>
+                        <p class="interview-publication">Wasafiri</p>
+                        <p class="interview-description">
+                            Quick insights into her writing process and literary influences
+                        </p>
+                    </a>
+                </article>
+
+                <article class="interview-item">
+                    <a href="https://claudiusspeaks.com/2016/05/21/author-spotlight-aurvi-sharma/" target="_blank" class="interview-link">
+                        <h3 class="interview-title">
+                            Author Spotlight
+                        </h3>
+                        <p class="interview-publication">Claudius Speaks</p>
+                        <p class="interview-description">
+                            In-depth discussion of her literary journey and upcoming projects
+                        </p>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title serif">Connect</h2>
+            <div class="contact-content">
+                <p style="font-size: 1.2rem; color: var(--text-light); margin-bottom: 2rem;">
+                    A branding consultant at <a href="http://www.studio577.in" target="_blank" class="text-highlight">Studio 577</a>, she lives in New York City.
+                </p>
+                <div class="contact-links">
+                    <a href="https://twitter.com/AurviS" target="_blank" class="contact-link">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="mailto:contact@aurvi.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- External JavaScript -->
+    <script src="script-modern.js"></script>
+</body>
+</html>
